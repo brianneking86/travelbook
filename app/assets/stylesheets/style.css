@@ -1,0 +1,33 @@
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+.intro{
+  display:inline;
+  float:left;
+}
+.login{
+  display:inline;
+  float:right;
+  margin-right: 50px;
+}
+.show-login{
+  cursor: pointer;
+  text-decoration: underline;
+}
+header{
+  background-color: #009999;
+  margin:0;
+}
