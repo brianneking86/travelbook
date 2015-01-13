@@ -1,0 +1,42 @@
+<header>
+  <h2>Welcome to TravelBook</h2>
+</header>
+<section>
+  <div class="intro">
+    <h4>Keep all your travel information</h4>
+  </div>
+  <div class="login" style="float:right; margin-right: 50px;">
+    <div class="show-login" style="cursor: pointer; text-decoration: underline;">
+      <h2>Log in</h2>
+    </div>
+    <div class="login-form">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
+    <div class="new user">
+      <h2><%= link_to "New to TravelBook?", new_user_registration_path %></h2>
+    </div>
+  </div>
+</section>
