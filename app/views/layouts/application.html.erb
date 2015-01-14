@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Travelbook</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <header>
-    <h2>Welcome to TravelBook</h2>
-  </header>
+  <head>
+    <title>TravelBook</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!--/////////// Header //////////-->
+    <header>
+      <div id="header-content">
+        <div id="header-name"><h2>TravelBook</h2></div><div id="header-links"><h4><% if user_signed_in? %><%= link_to "Profile", profile_path(current_user) %> | <%= link_to "Log Out", destroy_user_session_path, :method => :delete %><% end %></h4></div>
+      </div>
+    </header>
+    <!--/////////// Ends Header //////////-->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <%= yield %>
 
-  <%= yield %>
-
-</body>
+  </body>
 </html>
