@@ -17,8 +17,10 @@
 .intro{
   display:inline;
   float:left;
+  width: 45%;
 }
 .login{
+  width: 45%;
   display:inline;
   float:right;
   margin-right: 50px;
@@ -52,14 +54,14 @@ header{
 #header-links{
   display: inline;
   float: right;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 #header-links a{
   color: black;
 }
 
 #news-wrapper{
-  padding-top: 40px;
+  padding-top: 10px;
   max-width: 800px;
   margin: auto;
   right: 0;
@@ -68,7 +70,7 @@ header{
   padding-left: 5px;
 }
 #profiles-wrapper{
-  padding-top: 40px;
+  padding-top: 10px;
   max-width: 800px;
   margin: auto;
   right: 0;
@@ -77,7 +79,7 @@ header{
   padding-left: 5px;
 }
 #login-wrapper{
-  padding-top: 40px;
+  padding-top: 10px;
   max-width: 800px;
   margin: auto;
   right: 0;
