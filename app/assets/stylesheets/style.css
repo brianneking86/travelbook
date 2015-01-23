@@ -87,3 +87,44 @@ header{
   padding-right: 5px;
   padding-left: 5px;
 }
+#profile-personal{
+  display: block;
+}
+#profile-info{
+  display: inline;
+  float: left;
+  overflow: scroll;
+}
+#profile-photo{
+  display: inline;
+  float: left;
+}
+#profile-travel{
+  display: block;
+  margin-top: 15px;
+}
+#place-tab-bar{
+  display: block;
+  width: 100%;
+}
+.place-tab-bar-title{
+  display: inline;
+  float: left;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.place-tab-bar-tabs{
+  display: inline;
+  float: left;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.place-tab-bar-form{
+  display: inline;
+  float: left;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+}

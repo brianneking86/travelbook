@@ -1,9 +1,34 @@
-<section  id="profiles-wrapper">
-  <h2>Hi <%= @user.first_name %> <%= @user.last_name %>!</h2>
-  
-  <%= image_tag(@user.avatar.url, size: "170") %>
-  <%= form_for profile_path(@user), :method => 'patch' do |f| %>
-    <%= f.file_field :avatar %>
-    <%= f.submit "Upload Profile Image" %>
-  <% end %>
+<section  id="profiles-wrapper" class="clearfix">
+  <section id="profile-personal" class="clearfix">
+    <div id="profile-photo" class="clearfix">
+      <div class="profile-photo-image">
+        <%= image_tag(@user.avatar.url, size: "170") %>
+      </div>
+      <div class="profile-photo-form">
+        <%= form_for profile_path(@user), :method => 'patch' do |f| %>
+          <%= f.file_field :avatar %>
+          <%= f.submit "Upload Profile Image" %>
+        <% end %>
+      </div>
+    </div>
+    <div id="profile-info" class="clearfix">
+      <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+      <h4>Lives in Jersey City, NJ</h4>
+      <h4>Occupation: Web Developer</h4>
+      <h4>From Oakville, Ontario</h4>
+    </div>
+  </section>
+  <section id="profile-travel" class="clearfix">
+    <div id="place-tab-bar" class="clearfix">
+      <div class="place-tab-bar-title">
+        <h3>Places:</h3>
+      </div>
+      <div class="place-tab-bar-tabs">
+        <h3>place 1</h3>
+      </div>
+      <div class="place-tab-bar-form">
+        <h3>+</h3>
+      </div>
+    </div>
+  </section>
 </section>
