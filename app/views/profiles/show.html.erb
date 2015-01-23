@@ -1,3 +1,9 @@
 <section  id="profiles-wrapper">
   <h2>Hi <%= @user.first_name %> <%= @user.last_name %>!</h2>
+  
+  <%= image_tag(@user.avatar.url, size: "170") %>
+  <%= form_for profile_path(@user), :method => 'patch' do |f| %>
+    <%= f.file_field :avatar %>
+    <%= f.submit "Upload Profile Image" %>
+  <% end %>
 </section>
