@@ -1,0 +1,9 @@
+<h3>Add a New Place</h3>
+<%= form_for Place.new do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :location %>
+  <%= f.text_field :location %><br>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit "Add" %>
+<% end %>

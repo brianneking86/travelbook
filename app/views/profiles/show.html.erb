@@ -23,12 +23,20 @@
       <div class="place-tab-bar-title">
         <h3>Places:</h3>
       </div>
+      <% @user.places.each do |place| %>
       <div class="place-tab-bar-tabs">
-        <h3>place 1</h3>
+        <h3><%= place.name %></h3>
       </div>
+      <% end %>
       <div class="place-tab-bar-form">
-        <h3>+</h3>
+        <h3><%= link_to "Add +", new_place_path, :class => "fancybox" %></h3>
       </div>
     </div>
   </section>
 </section>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+</script>
