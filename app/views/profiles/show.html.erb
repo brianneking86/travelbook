@@ -32,6 +32,18 @@
         <h3><%= link_to "Add +", new_place_path, :class => "fancybox" %></h3>
       </div>
     </div>
+    <div id="travel-attractions">
+      <% @user.places.each do |place| %>
+      <div id="attraction-listing">
+        <h4><%= place.name %></h4>
+        <ul>
+        <% place.attractions.each do |attraction| %>
+          <li><%= attraction.name %></li>
+        <% end %>
+        </ul>
+      </div>
+      <% end %>
+    </div>
   </section>
 </section>
 
